@@ -6,7 +6,7 @@ require 'bcdice/game_system'
 require 'dotenv/load'
 
 get '/roll' do
-  return status 403 if request.get_header('HTTP_X_COROBOT_TOKEN') != ENV['X-COROBOT-TOKEN']
+  return [403, nil, 'Forbidden'] if request.get_header('HTTP_X_COROBOT_TOKEN') != ENV['X-COROBOT-TOKEN']
 
   text = params[:text]
   text ||= '1d100'
@@ -17,5 +17,5 @@ get '/roll' do
 end
 
 not_found do
-  'not found'
+  'Not found'
 end
