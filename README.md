@@ -1,2 +1,9 @@
 # corobot-api
-corobot APIサーバー
+
+[corobot](https://github.com/UsaMomokawa/corobot) APIサーバー
+
+## Deploy
+
+```
+$ git push heroku main
+```
