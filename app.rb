@@ -15,3 +15,7 @@ get '/roll' do
 
   [200, nil, { result: result.text }.to_json]
 end
+
+not_found do
+  'not found'
+end
